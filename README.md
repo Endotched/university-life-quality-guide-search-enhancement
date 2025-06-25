@@ -33,21 +33,44 @@
     * **Chrome:** [点击安装](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
     * **Firefox:** [点击安装](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)
     * **Edge:** [点击安装](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpbldldcalohfklkllfgjnnlse)
-
+---
 2.  **配置 Tampermonkey 扩展权限（重要）：**
     * 安装 Tampermonkey 扩展后，进入浏览器的“管理扩展程序”界面。
+    ![PixPin_2025-06-26_02-33-48](https://github.com/user-attachments/assets/9e74ff64-6a0f-4929-87b1-c78e13b696f7)
     * 找到“篡改猴”或“Tampermonkey”扩展，点击“详细信息”。
+      ![PixPin_2025-06-26_02-35-39](https://github.com/user-attachments/assets/3c5c54e9-3cd7-4371-9f7f-a10c3d78dcee)
     * **确保“允许访问文件网址”处于开启状态。**
     * **确保“有权访问的网站”选择“在所有网站上”或者选择“在特定网站上”（并添加 `colleges.chat`）。**
+    ![PixPin_2025-06-26_02-37-05](https://github.com/user-attachments/assets/931349a6-b858-4e17-9168-c14818614589)
+
+---
 
 3.  **获取并安装脚本代码/插件（推荐两种方式）：**
 
     * **方式一 (推荐：通过 Greasy Fork 网站直接安装插件 - 易于更新):**
-        1.  点击此链接进入 Greasy Fork 上的脚本页面：
+        1.  右键点击此链接并选择"在新标签页打开链接"后进入 Greasy Fork 上的脚本页面：
             **[大学生活质量指北网站搜索增强 (Greasy Fork)](https://greasyfork.org/en/scripts/540757-%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F%E6%8C%87%E5%8C%97%E7%BD%91%E7%AB%99%E6%90%9C%E7%B4%A2%E5%A2%9E%E5%BC%BA-%E6%9C%80%E7%BB%88%E4%BF%AE%E5%A4%8D%E7%89%88)**
         2.  在 Greasy Fork 页面上，找到并点击“**安装此脚本**”（或 `Install this script`）按钮。
-        3.  Tampermonkey 会自动捕获安装请求，弹出一个确认安装的界面。点击“**安装**”或“**确认安装**”按钮。
-        4.  安装完成后，点击 Tampermonkey 的浏览器插件图标后会打开仪表盘，找到并点击“控制面板”选项，进入插件管理界面，确认“大学生活质量指北网站搜索增强”脚本已下载完毕并处于“**已启用**”状态（开关为绿色）。
+      
+        ![PixPin_2025-06-26_02-10-45](https://github.com/user-attachments/assets/b46f32b0-3981-4c99-8f17-717b26e9dd8f)
+      
+        4.  Tampermonkey 会自动捕获安装请求，弹出一个确认安装的界面。点击“**安装**”或“**确认安装**”按钮。
+      ![PixPin_2025-06-26_02-16-44](https://github.com/user-attachments/assets/8299735e-b3c0-4ded-ab00-917eee5bc573)
+
+        ![PixPin_2025-06-26_02-13-41](https://github.com/user-attachments/assets/0bd5ba82-adfa-4973-8219-da5135a93228)
+      
+        6.  安装完成后，点击 Tampermonkey 的浏览器插件图标后会打开仪表盘，
+      
+        ![PixPin_2025-06-26_02-14-55](https://github.com/user-attachments/assets/52ff69f8-b5f8-400c-9651-3773cb7f0fa0)
+      
+        8.  找到并点击“控制面板”选项
+      
+        ![PixPin_2025-06-26_02-16-09](https://github.com/user-attachments/assets/d2f5241c-5921-44e5-a021-bed1597ae255)
+           
+        10.  点击后进入插件管理界面，确认“大学生活质量指北网站搜索增强”脚本已下载完毕并处于“**已启用**”状态（开关为绿色）。
+
+        ![PixPin_2025-06-26_02-16-44](https://github.com/user-attachments/assets/8cbecbe8-92be-4edf-8cfa-0e8fae197f45)
+            
         * **如果安装未能成功，请多尝试几次，或者尝试清除浏览器缓存后再试。**
 
     * **方式二 (备用：通过 GitHub 源代码安装 - 适合开发者或手动更新):**
@@ -56,9 +79,10 @@
            （ 也可以点击raw按钮进入纯文本显示模式并将页面中的所有代码复制或者下载完源文件之后用IDE工具打开文件再复制 ）
         4.  在 Tampermonkey 仪表盘中，点击“**创建新脚本/添加新脚本...**”，然后将默认生成的所有代码**全部删除**，再将复制的代码**粘贴**进去。
         5.  点击“文件” (File) -> “保存” (Save) 按钮。（或者使用"ctrl+s"快捷键保存）
+
         6.  在 Tampermonkey 控制面板中，确认脚本已启用。
 
-4.  **刷新网站：**
+5.  **刷新网站：**
     * 访问 <https://colleges.chat/>。
     * **强制刷新页面**（Windows/Linux: `Ctrl + Shift + R`，macOS: `Cmd + Shift + R`），以确保新脚本加载生效。
 
@@ -115,8 +139,6 @@
 本脚本依据 **MIT 许可证** 发布。这意味着您可以自由地使用、复制、修改、合并、发布、分发、再许可和/或销售本软件的副本。唯一的条件是，在使用时需包含原始的版权和许可证声明。
 
 -----
-
-
 
 
 
