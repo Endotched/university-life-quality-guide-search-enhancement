@@ -16,9 +16,8 @@
 2.  **📊 多结果智能呈现：** 当您的搜索关键词匹配到多所大学时，脚本会优雅地弹出一个**美观且可滚动**的模态窗口。所有匹配结果（包含大学名称和所属类别）一目了然，您可以从中精确选择想要跳转的目标。
 
 3.  **⚡️ 流畅的用户反馈：**
-
-      * 搜索启动时，底部会显示一个**非阻塞**的加载提示（Toast），配有精致的加载动画，让您清晰掌握搜索进度。
-      * 点击结果中的“前往”按钮时，该 Toast 会智能切换为“即将跳转...”提示，平滑过渡到新页面，避免跳转时的突兀感。
+    * 搜索启动时，底部会显示一个**非阻塞**的加载提示（Toast），配有精致的加载动画，让您清晰掌握搜索进度。
+    * 点击结果中的“前往”按钮时，该 Toast 会智能切换为“即将跳转...”提示，平滑过渡到新页面，避免跳转时的突兀感。
 
 4.  **✅ 智能类别筛选：** 除了模糊匹配大学名称，您还可以根据需要在“问卷数据”、“已归档数据”或新增的“所有类别”中进行精确筛选，让搜索结果更聚焦。
 
@@ -31,33 +30,37 @@
 ## 📦 安装步骤
 
 1.  **安装 Tampermonkey 扩展：**
+    * **Chrome:** [点击安装](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+    * **Firefox:** [点击安装](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)
+    * **Edge:** [点击安装](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpbldldcalohfklkllfgjnnlse)
 
-      * **Chrome:** [点击安装](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-      * **Firefox:** [点击安装](https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/)
-      * **Edge:** [点击安装](https://www.google.com/search?q=https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpbldldcalohfklkllfgjnnlse)
+2.  **配置 Tampermonkey 扩展权限（重要）：**
+    * 安装 Tampermonkey 扩展后，进入浏览器的“管理扩展程序”界面。
+    * 找到“篡改猴”或“Tampermonkey”扩展，点击“详细信息”。
+    * **确保“允许访问文件网址”处于开启状态。**
+    * **确保“有权访问的网站”选择“在所有网站上”或者选择“在特定网站上”（并添加 `colleges.chat`）。**
 
-2.  **获取脚本代码（两种方式）：**
+3.  **获取并安装脚本代码/插件（推荐两种方式）：**
 
-      * **方式一 (推荐，自动更新):**
-        直接点击此链接安装最新版本的脚本：
-        **[点此安装大学生活质量指北网站搜索增强脚本](https://greasyfork.org/en/scripts/540757-%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F%E6%8C%87%E5%8C%97%E7%BD%91%E7%AB%99%E6%90%9C%E7%B4%A2%E5%A2%9E%E5%BC%BA-%E6%9C%80%E7%BB%88%E4%BF%AE%E5%A4%8D%E7%89%88/code)**
-        
+    * **方式一 (推荐：通过 Greasy Fork 网站直接安装插件 - 易于更新):**
+        1.  点击此链接进入 Greasy Fork 上的脚本页面：
+            **[大学生活质量指北网站搜索增强 (Greasy Fork)](https://greasyfork.org/en/scripts/540757-%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB%E8%B4%A8%E9%87%8F%E6%8C%87%E5%8C%97%E7%BD%91%E7%AB%99%E6%90%9C%E7%B4%A2%E5%A2%9E%E5%BC%BA-%E6%9C%80%E7%BB%88%E4%BF%AE%E5%A4%8D%E7%89%88)**
+        2.  在 Greasy Fork 页面上，找到并点击“**安装此脚本**”（或 `Install this script`）按钮。
+        3.  Tampermonkey 会自动捕获安装请求，弹出一个确认安装的界面。点击“**安装**”或“**确认安装**”按钮。
+        4.  安装完成后，点击 Tampermonkey 的浏览器插件图标后会打开仪表盘，找到并点击“控制面板”选项，进入插件管理界面，确认“大学生活质量指北网站搜索增强”脚本已下载完毕并处于“**已启用**”状态（开关为绿色）。
+        * **如果安装未能成功，请多尝试几次，或者尝试清除浏览器缓存后再试。**
 
-      * **方式二 (手动复制代码)：**
-
-        1.  点击此处访问\*\*[脚本源代码文件](https://github.com/Endotched/university-life-quality-guide-search-enhancement/blob/main/.user.js)\*\* 。
-        2.  在打开的 GitHub 页面中，点击文件内容上方的 `Raw` 按钮，进入纯文本显示模式。
-        3.  将页面中的所有代码复制。
+    * **方式二 (备用：通过 GitHub 源代码安装 - 适合开发者或手动更新):**
+        1.  点击此处访问**[脚本源代码文件在 GitHub](https://github.com/Endotch/university-life-quality-guide-search-enhancement/blob/main/university-life-quality-guide-search-enhancement.user.js)** （请确保链接中的用户名和仓库名是您自己的）。
+        2.  在打开的 GitHub 页面中，点击文件内容上方的 `Raw` 按钮右边的"Copy raw file"按钮即可直接复制源代码。
+           （ 也可以点击raw按钮进入纯文本显示模式并将页面中的所有代码复制或者下载完源文件之后用IDE工具打开文件再复制 ）
         4.  在 Tampermonkey 仪表盘中，点击“**创建新脚本/添加新脚本...**”，然后将默认生成的所有代码**全部删除**，再将复制的代码**粘贴**进去。
-
-3.  **保存脚本：**
-
-      * 在 Tampermonkey 编辑器中，点击“文件” (File) -\> “保存” (Save) 按钮。
+        5.  点击“文件” (File) -> “保存” (Save) 按钮。（或者使用"ctrl+s"快捷键保存）
+        6.  在 Tampermonkey 控制面板中，确认脚本已启用。
 
 4.  **刷新网站：**
-
-      * 访问 [https://colleges.chat/](https://colleges.chat/)。
-      * **强制刷新页面**（Windows/Linux: `Ctrl + Shift + R`，macOS: `Cmd + Shift + R`），以确保新脚本加载生效。
+    * 访问 <https://colleges.chat/>。
+    * **强制刷新页面**（Windows/Linux: `Ctrl + Shift + R`，macOS: `Cmd + Shift + R`），以确保新脚本加载生效。
 
 ## 🚀 使用方法
 
@@ -65,56 +68,55 @@
 
 2.  **定位搜索框：** 在页面加载完成后，您会在**右上方**看到一个简洁的搜索模块（包含输入框、类别选择和“搜索”按钮）。
 
-3.  **输入大学名称：** 在输入框中键入您想查找的大学名称（支持模糊匹配，例如输入“浙大”也可能找到“浙江大学”）。
+![PixPin_2025-06-26_00-07-57](https://github.com/user-attachments/assets/ac65668d-43b8-47b1-a601-1f49d2814786)
 
-4.  **选择信息类别：** 在下拉菜单中选择您想搜索的类别：“问卷数据”、“已归档数据”或“所有类别”。
+4.  **输入大学名称：** 在输入框中键入您想查找的大学名称（支持模糊匹配，例如输入“浙大”也可能找到“浙江大学”）。
 
-5.  **启动搜索：** 点击“**搜索**”按钮。
+![PixPin_2025-06-26_00-08-21](https://github.com/user-attachments/assets/9feb23cf-51f0-4d96-83ae-6b33d00e87ac)
 
-6.  **查看搜索结果：**
+6.  **选择信息类别：** 在下拉菜单中选择您想搜索的类别：“问卷数据”、“已归档数据”或“所有类别”。
 
-      * 页面底部会出现一个短暂的“**正在搜索...**”加载提示。
-      * 搜索完成后，页面中央会弹出一个“**搜索结果**”模态窗口，列出所有符合条件 的大学及其所属类别。
+7.  **启动搜索：** 点击“**搜索**”按钮。
 
-7.  **跳转到大学页面：**
+8.  **查看搜索结果：**
+    * 页面底部会出现一个短暂的“**正在搜索...**”加载提示。
+    * 搜索完成后，页面中央会弹出一个“**搜索结果**”模态窗口，列出所有符合条件的大学及其所属类别。
 
-      * 在结果列表中，点击您希望前往的大学旁的“**前往**”按钮。
-      * 模态窗口会关闭，底部会显示“**即将跳转...**”提示，随后页面会自动跳转到该大学的详情页。
+![PixPin_2025-06-26_00-08-58](https://github.com/user-attachments/assets/6ae688da-e523-42fa-862f-8f3576952560)
 
-8.  **关闭结果窗口：** 您可以点击结果窗口右上角的“**×**”按钮，或点击窗口外部的半透明区域来关闭它。
+9.  **跳转到大学页面：**
+    * 在结果列表中，点击您希望前往的大学旁的“**前往**”按钮。
+    * 模态窗口会关闭，底部会显示“**即将跳转...**”提示，随后页面会自动跳转到该大学的详情页。
+
+![PixPin_2025-06-26_00-09-17](https://github.com/user-attachments/assets/7df9f675-1d27-487a-8235-fcc32db43d66)
+
+10.  **关闭结果窗口：** 您可以点击结果窗口右上角的“**×**”按钮，或点击窗口外部的半透明区域来关闭它。
 
 ## 💡 常见问题与故障排除
 
-  * **搜索框没有显示 / 脚本没有运行：**
+* **搜索框没有显示 / 脚本没有运行：**
+    * 请确保您已正确安装 Tampermonkey 扩展，并且其图标为彩色（表示已启用）。
+    * 在 Tampermonkey 仪表盘中，确认“大学生活质量指北网站搜索增强”脚本旁边的开关为**绿色**（已启用）。
+    * 尝试强制刷新网站页面 (`Ctrl + Shift + R` / `Cmd + Shift + R`)。
+    * 打开浏览器控制台 (F12 -> Console)，检查是否有任何“`油猴脚本:`”开头的错误信息。
 
-      * 请确保您已正确安装 Tampermonkey 扩展，并且其图标为彩色（表示已启用）。
-      * 在 Tampermonkey 仪表盘中，确认“大学生活质量指北网站搜索增强”脚本旁边的开关为**绿色**（已启用）。
-      * 尝试强制刷新网站页面 (`Ctrl + Shift + R` / `Cmd + Shift + R`)。
-      * 打开浏览器控制台 (F12 -\> Console)，检查是否有任何“`油猴脚本:`”开头的错误信息。
-
-  * **点击“搜索”或“前往”按钮后没有反应：**
-
-      * 请再次检查浏览器控制台 (F12 -\> Console)，查看是否有任何新的错误日志，特别是点击后没有日志输出的情况。这通常意味着事件监听器未被正确触发或脚本执行中断。
-      * 尝试清除浏览器缓存，然后强制刷新页面。
+* **点击“搜索”或“前往”按钮后没有反应：**
+    * 请再次检查浏览器控制台 (F12 -> Console)，查看是否有任何新的错误日志，特别是点击后没有日志输出的情况。这通常意味着事件监听器未被正确触发或脚本执行中断。
+    * 尝试清除浏览器缓存，然后强制刷新页面。
 
 ## 💖 贡献与反馈
 
 如果您在使用过程中遇到任何问题（Bug）、有功能上的建议，或者希望为脚本的改进贡献代码，都非常欢迎！
-
-  * 请通过 Greasy Fork 的评价/评论功能或 GitHub 仓库（如果有）提供反馈。
-  * 您的每一次反馈都是脚本变得更好的动力！
+* 请通过 Greasy Fork 的评价/评论功能或 GitHub 仓库（如果有）提供反馈。
+* 您的每一次反馈都是脚本变得更好的动力！
 
 ## 📜 许可证
 
 本脚本依据 **MIT 许可证** 发布。这意味着您可以自由地使用、复制、修改、合并、发布、分发、再许可和/或销售本软件的副本。唯一的条件是，在使用时需包含原始的版权和许可证声明。
 
-**以下为实际操作的 Demo 演示效果图：**
-
 -----
 
-**以下为实际操作的 Demo 演示效果图：**
 
-![PixPin_2025-06-26_00-07-57](https://github.com/user-attachments/assets/ac65668d-43b8-47b1-a601-1f49d2814786)
-![PixPin_2025-06-26_00-08-21](https://github.com/user-attachments/assets/9feb23cf-51f0-4d96-83ae-6b33d00e87ac)
-![PixPin_2025-06-26_00-08-58](https://github.com/user-attachments/assets/6ae688da-e523-42fa-862f-8f3576952560)
-![PixPin_2025-06-26_00-09-17](https://github.com/user-attachments/assets/7df9f675-1d27-487a-8235-fcc32db43d66)
+
+
+
